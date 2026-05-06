@@ -197,22 +197,22 @@ st.markdown("""
 
     /* ── DOWNLOAD BUTTONS ── */
     [data-testid="stDownloadButton"] > button {
-        background: linear-gradient(135deg, #1B2A4A 0%, #2D4A7A 100%) !important;
+        background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%) !important;
         color: white !important;
         border: none !important;
         border-radius: 10px !important;
         padding: 12px 28px !important;
         font-weight: 600 !important;
-        font-size: 14px !important;
-        box-shadow: 0 4px 15px rgba(27, 42, 74, 0.3) !important;
+        font-size: 21px !important;
+        box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3) !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
     }
-
+    
     [data-testid="stDownloadButton"] > button:hover {
         transform: translateY(-3px) !important;
-        box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4) !important;
-        background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%) !important;
+        box-shadow: 0 8px 25px rgba(0, 180, 216, 0.5) !important;
+        background: linear-gradient(135deg, #0077B6 0%, #00B4D8 100%) !important;
     }
 
     /* ── FILE UPLOADER ── */
@@ -1461,7 +1461,7 @@ elif page == '📥 Download Results':
     st.markdown('---')
 
     # Download Option 2 — Default Predictions
-    styled_heading('💵 Download Payment Default Predictions')
+    styled_heading('Download Payment Default Predictions')
     st.markdown('Contains risk category and default probability for every campaign')
     pred_download = df_model[['Client.Name','Order_Value_Clean',
                                'Campaign_Days','Payment_Status_Clean',
@@ -1484,7 +1484,7 @@ elif page == '📥 Download Results':
     st.markdown('---')
 
     # Download Option 3 — Combined Report
-    styled_heading(' Download Combined Report')
+    styled_heading('Download Combined Report')
     st.markdown('Contains everything — RFM scores + Risk categories in one file')
 
     # Merge RFM and predictions
